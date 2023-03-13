@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <title>{{ title }}</title>
+    <link rel="icon" href="/static/img/icon.png" type="image/icon type">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="nav">
+            <div class="navbar">
+                <span id="about"><a href="#scrolla">{{about}}</a></span>
+                <span id="main"><a href="#scrollm">{{main}}</a></span>
+            </div>
+        </div>
+        <div class="hero-cont">     
+            <div class="titlecenter">
+                <span id="t1">{{title}}</span>
+                <span id="t2">{{title}}</span>
+                <span id="t3">{{title}}</span>        
+            </div>
+        </div>
+    </div>
+
+    <div class="tts_section" id="scrollm">
+        <div class="tts_container">
+            <h1 id="mainhd">{{ title }}</h1>
+            <form method="post" action="{%url 'tts' %}" >
+                {% csrf_token %}
+                <div class="formcontainer">
+                    <div class="form-section">
+                        <label><h2>{{ head1 }}</h2></label>
+                        <textarea name="text" value={{text}}></textarea>
+                        <div class="btn">
+                            <button id="txtbtn" type="submit">Submit</button>
+                        </div>
+                    </div>
+                    {% comment %} <div class="form-section">
+                        <label><h2>{{head2}}</h2></label>
+                        <input id="finp" type="file" name="file" value={{file}}>
+                        <div class="upimg">
+                            <label for="finp">
+                                <img  id="image" src="{% static 'upload.png' %}" alt="uploadimage" onclick="c()"/>
+                            </label>
+                        </div>  
+                        <button id="filebtn" type="submit">Submit</button>
+                    </div> {% endcomment %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="about-section" id="scrolla">
+        <div class="abtcont">
+            <div class="as-title">
+                {{title}}
+            </div>
+            <div class="info">
+                {{p}}
+            </div>
+        </div>
+        <div class="abt-img">
+            <img id="abt-img" src="{% static 'img/abtimg.png' %}" alt="My image">
+        </div>
+    </div>
+    
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.instagram.com/sohammm04/?hl=en"><i class="icon ion-social-instagram"><img class="mediaicon" src="{% static 'img/instagram.png' %}" alt="Insta"></i></a><a href="#"><i class="icon ion-social-snapchat"><img class="mediaicon" src="{% static 'img/snapchat.png' %}" alt="snap"></i></a><a href="#"><i class="icon ion-social-twitter"><img class="mediaicon" src="{% static 'img/twitter.png' %}" alt="twitter"></i></a><a href="#"><i class="icon ion-social-facebook"><img class="mediaicon" src="{% static 'img/facebook.png' %}" alt="facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="/">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">SOHAM © 2023</p>
+        </footer>
+    </div>
+    
+</body>
+
+</html>

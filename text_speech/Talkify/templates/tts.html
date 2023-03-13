@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    
+    <title>Player</title>
+    <link rel="icon" href="/static/img/icon.png" type="image/icon type">
+</head>
+<body>
+    <div class="hero-section" id="hstts">
+        <div class="nav">
+            <div class="navbar">
+                <span id="home"><a href="/">Home</a></span>
+            </div>
+        </div>
+        <div class="hero-cont">     
+            <div class="titlecenter">
+                <audio controls id="ado">
+                    <source src="static/{{h}}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>     
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.instagram.com/sohammm04/?hl=en"><i class="icon ion-social-instagram"><img class="mediaicon" src="{% static 'img/instagram.png' %}" alt="Insta"></i></a><a href="#"><i class="icon ion-social-snapchat"><img class="mediaicon" src="{% static 'img/snapchat.png' %}" alt="snap"></i></a><a href="#"><i class="icon ion-social-twitter"><img class="mediaicon" src="{% static 'img/twitter.png' %}" alt="twitter"></i></a><a href="#"><i class="icon ion-social-facebook"><img class="mediaicon" src="{% static 'img/facebook.png' %}" alt="facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#scrolla">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">SOHAM © 2023</p>
+        </footer>
+    </div>
+</body>
+    
+</html>
